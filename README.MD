@@ -45,7 +45,7 @@ It surfaces **candidate findings** for analyst review.
 ### Python dependencies
 ```bash
 pip install python-nmap
-
+```
 ---                                 
 
 ## Installation
