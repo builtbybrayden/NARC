@@ -120,6 +120,53 @@ This output is intentionally formatted to match standard Nmap output, making it 
 - Share with stakeholders
 - Archive as evidence
 
+```bash
+# Nmap 7.98 scan initiated Fri Dec 12 12:43:45 2025 as: nmap -sS -T4 -n -A --top-ports 1000 --script vulners -oN .\\narc_scanme.nmap.org_20251212_124345.txt scanme.nmap.org
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.055s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 996 filtered tcp ports (no-response)
+PORT      STATE SERVICE    VERSION
+22/tcp    open  tcpwrapped
+80/tcp    open  http       Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| vulners: 
+|   cpe:/a:apache:http_server:2.4.7: 
+|     	*This is where the vulnerability list appears with possible vulnerabilities related to open and running services on a scanned device*
+    -  VULNERABILITY 1
+    -  VULNERABILITY 2
+    -  VULNERABILITY 3
+9929/tcp  open  nping-echo Nping echo
+31337/tcp open  tcpwrapped
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|router
+Running: Linux 4.X|5.X, MikroTik RouterOS 7.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
+OS details: Linux 4.15 - 5.19, Linux 4.19, Linux 5.0 - 5.14, OpenWrt 21.02 (Linux 5.4), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Network Distance: 19 hops
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   1.00 ms  10.0.0.1
+2   13.00 ms 100.92.136.2
+3   15.00 ms 96.110.197.77
+4   17.00 ms 96.108.82.62
+5   15.00 ms 96.110.153.1
+6   16.00 ms 96.110.153.1
+7   18.00 ms 68.86.95.89
+8   18.00 ms 68.86.95.93
+9   ... 10
+11  20.00 ms 23.209.172.71
+12  20.00 ms 23.209.172.71
+13  56.00 ms 23.207.232.39
+14  56.00 ms 23.207.232.39
+15  ... 18
+19  57.00 ms 45.33.32.156
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 12 12:44:02 2025 -- 1 IP address (1 host up) scanned in 17.72 seconds
+```
+
 ---
                                  
 ## Permissions & Scan Types
