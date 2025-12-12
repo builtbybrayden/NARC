@@ -51,74 +51,74 @@ pip install python-nmap
 ## Installation
 
 Clone the repository:
-
+```bash
 git clone https://github.com/<your-username>/NARC.git
 cd NARC
-
+```
 
 Ensure Nmap is installed and accessible:
-
+```bash
 nmap --version
-
+```
 
 (Optional) Set Vulners API key:
-
+```bash
 setx VULNERS_API_KEY "your_api_key_here"
-
+```
 
 Run the tool:
-
+```bash
 python narc.py
-
+```
 ---
                                  
 ## Usage Flow
 
 Enter a target:
 
--Single IP (192.168.1.10)
--CIDR range (192.168.1.0/24)
--Hostname (scanme.nmap.org)
+- Single IP (192.168.1.10)
+- CIDR range (192.168.1.0/24)
+- Hostname (scanme.nmap.org)
 
 Choose a scan preset:
 
--stealth — slower, minimal noise
--standard — balanced with service detection
--noisy — fast and aggressive
+- stealth — slower, minimal noise
+- standard — balanced with service detection
+- noisy — fast and aggressive
 
 Choose port strategy:
 
--Common ports
--Top ports
--All ports
--Custom ranges
+- Common ports
+- Top ports
+- All ports
+- Custom ranges
 
-(Optional) Add extra Nmap flags
+**(Optional) Add extra Nmap flags**
 
-(Optional) Enable Vulners CVE enrichment
+**(Optional) Enable Vulners CVE enrichment**
 
 Run the scan and receive a .txt report:
-
+```bash
 narc_192.168.1.0_24_20251212_142233.txt
-
+```
 ---
                                  
 ## Output Example
 
 The generated report includes:
 
--Host discovery results
--Open ports and services
--Version information
--Vulners CVE listings (when enabled)
--CVSS scores and references
+- Host discovery results
+- Open ports and services
+- Version information
+- Vulners CVE listings (when enabled)
+- CVSS scores and references
 
 This output is intentionally formatted to match standard Nmap output, making it easy to:
 
--Paste into reports
--Attach to tickets
--Share with stakeholders
--Archive as evidence
+- Paste into reports
+- Attach to tickets
+- Share with stakeholders
+- Archive as evidence
 
 ---
                                  
@@ -128,8 +128,8 @@ Some scan types (e.g., -sS, -O) require elevated privileges on Windows.
 
 If you encounter permission errors:
 
--Run PowerShell as Administrator, or
--Switch to -sT (TCP connect scan)
+- Run PowerShell as Administrator, or
+- Switch to -sT (TCP connect scan)
 
 ---
                                  
@@ -137,9 +137,9 @@ If you encounter permission errors:
 
 This tool is intended only for:
 
--Systems you own
--Networks you administer
--Environments where you have explicit written authorization
+- Systems you own
+- Networks you administer
+- Environments where you have explicit written authorization
 
 Unauthorized scanning is illegal and unethical.
 
@@ -149,11 +149,11 @@ Unauthorized scanning is illegal and unethical.
 
 Planned or possible extensions:
 
--JSON / CSV structured output
--Service-to-CPE confidence scoring
--Analyst notes section in reports
--Comparison scans (detect new services over time)
--SIEM or ticketing system integration
+- JSON / CSV structured output
+- Service-to-CPE confidence scoring
+- Analyst notes section in reports
+- Comparison scans (detect new services over time)
+- SIEM or ticketing system integration
 
 ---
                                  
